@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>مسابقة تووت الكبرى</title>
-    <!-- استيراد الخطوط (Lalezar للعناوين و Poppins للنصوص) -->
+    <title>مسابقة تووت الكبرى 🍓</title>
+    <!-- استيراد خطوط Lalezar و Poppins -->
     <link href="https://fonts.googleapis.com/css2?family=Lalezar&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -281,121 +281,104 @@
 
     <!-- شاشة العقاب -->
     <div id="penalty-overlay">
-        <h2>عقوبة الزمن! ⏳</h2>
-        <p style="font-size: 1.5rem; font-weight: bold;">لقد أجبت بشكل خاطئ. يجب أن تنتظر الآن...</p>
+        <h2>😱 أوه لا! عقوبة!</h2>
+        <p style="font-size: 1.5rem;">لقد تسرعت وأجبت بشكل خاطئ...</p>
         <div id="timer">00:00</div>
-        <p style="font-size: 1.2rem; color: #ccc;">لا يمكنك فعل أي شيء حتى ينتهي الوقت، تحمل نتيجة أفعالك!</p>
+        <p>لا يمكنك فعل أي شيء حتى ينتهي الوقت!</p>
     </div>
 
     <div class="container">
         
-        <!-- الخطوة 0 -->
+        <!-- الخطوة 0: البداية -->
         <div id="step-0" class="step active">
-            <h1 class="main-title">مسابقة <span>تووت</span> الكبرى</h1>
-            <div class="subtitle-banner">10 أسئلة للجائزة الكبرى</div>
+            <h1 class="main-title">HILARIOUS<br><span>QUIZ</span></h1>
+            <div class="subtitle-banner">✨ مسابقة تووت الكبرى ✨</div>
             
-            <div class="quiz-card" style="transform: rotate(0); border-color: var(--primary-yellow);">
+            <div class="quiz-card" style="transform: rotate(0deg);">
                 <div class="card-body">
-                    <p style="font-size: 1.3rem; font-weight: 700;">10 أسئلة اذا جاوبت عنهم ستكشف لك الجائزة الكبرى!</p>
-                    <p style="font-size: 1.1rem; color: #555;">في البداية يجب أن تتعهد على أن تجاوب بشكل صحيح وصادق للحصول على الجائزة.</p>
-                    
+                    <p>10 أسئلة إذا جاوبت عنهم ستكشف لك الجائزة الكبرى... هل أنت مستعدة؟</p>
                     <div class="pledge-container">
                         <input type="checkbox" id="pledge-checkbox">
-                        <label for="pledge-checkbox" style="font-weight: 700; font-size: 1.2rem;">أتعهد بذلك!</label>
+                        <label for="pledge-checkbox" style="font-weight: bold; font-size: 1.2rem;">أتعهد بأن أجيب بشكل صحيح وصادق للحصول على الجائزة.</label>
                     </div>
-
-                    <button id="start-btn" class="btn-comic" disabled>ابدأ التحدي الآن!</button>
+                    <button id="start-btn" class="btn-comic" disabled>ابدأ التحدي! 🚀</button>
                 </div>
             </div>
         </div>
 
-        <!-- السؤال 1 -->
+        <!-- الخطوة 1 -->
         <div id="step-1" class="step">
-            <h1 class="main-title" style="font-size: 3rem;">السؤال <span>الأول</span></h1>
-            
-            <div class="quiz-card" style="border-color: var(--header-orange);">
-                <div class="card-header" style="background-color: var(--header-orange);">المعرفة العامة</div>
+            <div class="quiz-card">
+                <div class="card-header" style="background-color: var(--header-orange);">السؤال 1 / 10</div>
                 <div class="card-body">
                     <p class="question-text">زهرة تتميز برائحتها العطرة وفوائدها الصحية والعلاجية المتعددة للجسم والبشرة؟</p>
-                    
-                    <input type="text" id="q1-input" placeholder="اسم الزهرة...">
-                    <button id="q1-submit" class="btn-comic">إجابة!</button>
-                    
-                    <div id="q1-feedback" class="feedback"></div>
+                    <input type="text" id="q1-input" placeholder="اكتب اسم الزهرة...">
+                    <br><button id="q1-submit" class="btn-comic">تحقق ✔️</button>
+                    <div id="q1-feedback" class="feedback hidden"></div>
                     
                     <div id="q1-hint-area" class="hidden">
                         <button id="q1-hint-btn" class="btn-comic btn-hint">💡 احتاج تلميح</button>
-                        <div id="q1-hint-text" class="hint-box">
-                            التلميح: أول حرف من حروف اللغة لو ضفناه في الآخر هتلاقي الجواب الصح
-                        </div>
+                        <div id="q1-hint-text" class="hint-box">التلميح: أول حرف من حروف اللغة لو ضفناه في الآخر هتلاقي الجواب الصح.</div>
                     </div>
                     
-                    <button id="q1-next" class="btn-comic btn-next hidden">التالي ✓</button>
+                    <button id="q1-next" class="btn-comic btn-next hidden">التالي ➡️</button>
                 </div>
             </div>
         </div>
 
-        <!-- السؤال 2 -->
+        <!-- الخطوة 2 -->
         <div id="step-2" class="step">
-            <h1 class="main-title" style="font-size: 3rem;">السؤال <span>الثاني</span></h1>
-            
-            <div class="quiz-card" style="border-color: var(--header-purple);">
-                <div class="card-header" style="background-color: var(--header-purple);">من بالصورة؟</div>
+            <div class="quiz-card">
+                <div class="card-header" style="background-color: var(--header-purple);">السؤال 2 / 10</div>
                 <div class="card-body">
                     <p class="question-text">ما اسم البنت في الصورة؟ (الاسم ثنائي)</p>
-                    <img src="images/q2_girl.jpg" alt="صورة البنت" class="q-img" onerror="this.src='https://placehold.co/400x300/8b5CF6/ffffff?text=صورة+ياسمين'">
-
+                    <img src="images/q2_girl.jpg" alt="صورة البنت" class="q-img">
                     <input type="text" id="q2-input" placeholder="الاسم الثنائي...">
-                    <button id="q2-submit" class="btn-comic">تحقق</button>
-                    
-                    <div style="margin-top: 20px; border-top: 2px dashed #ccc; padding-top: 15px;">
-                        <p style="font-size: 0.9em; color: #555; margin-bottom: 5px;">في حال احتجت مساعدة، أدخل الكود السري لإرسال التلميح للإيميل:</p>
-                        <input type="text" id="q2-passcode" placeholder="أدخل الكود السري..." style="width: 80%; margin-bottom: 10px;">
-                        <br>
-                        <button id="q2-help-btn" class="btn-comic" style="background-color: var(--header-blue); color: white; font-size: 1.2rem;">🆘 إرسال وسيلة المساعدة</button>
-                        <div id="q2-help-msg" class="feedback" style="min-height: auto; margin-top: 5px;"></div>
-                    </div>
+                    <br><button id="q2-submit" class="btn-comic">تحقق ✔️</button>
+                    <div id="q2-feedback" class="feedback hidden"></div>
 
-                    <div id="q2-feedback" class="feedback"></div>
-                    <button id="q2-next" class="btn-comic btn-next hidden">التالي ✓</button>
+                    <div style="margin-top: 25px; padding: 15px; background: rgba(0,0,0,0.05); border-radius: 10px; border: 2px dashed #999;">
+                        <p style="font-size: 0.9rem; margin-bottom: 10px;">تحتاج مساعدة؟ أدخل الكود السري لإرسال التلميح للإيميل</p>
+                        <input type="text" id="q2-passcode" placeholder="الكود السري...">
+                        <br><button id="q2-help-btn" class="btn-comic btn-hint" style="background-color: #fff; color: var(--accent-pink); border-color: var(--accent-pink);">🆘 إرسال وسيلة المساعدة</button>
+                        <div id="q2-help-msg" class="feedback hidden"></div>
+                    </div>
+                    
+                    <button id="q2-next" class="btn-comic btn-next hidden">التالي ➡️</button>
                 </div>
             </div>
         </div>
 
-        <!-- السؤال 3 -->
+        <!-- الخطوة 3 -->
         <div id="step-3" class="step">
-            <h1 class="main-title" style="font-size: 3rem;">السؤال <span>الثالث</span></h1>
-            
-            <div class="quiz-card" style="border-color: var(--header-red);">
-                <div class="card-header" style="background-color: var(--header-red);">التواريخ المهمة</div>
+            <div class="quiz-card">
+                <div class="card-header" style="background-color: var(--header-green);">السؤال 3 / 10</div>
                 <div class="card-body">
-                    <p class="question-text">أول رسالة تم إرسالها إلى الرقم المنتهي ب 71 كانت في تاريخ ؟</p>
-                    <p style="font-size: 0.85em; color: #666; margin-top:-15px; margin-bottom: 20px;">(طريقة الكتابة: 10 يناير2022)</p>
-
-                    <input type="text" id="q3-input" placeholder="اكتب التاريخ...">
-                    <button id="q3-submit" class="btn-comic">تأكيد!</button>
+                    <p class="question-text">أول رسالة تم إرسالها إلى الرقم المنتهي بـ 71 كانت في تاريخ؟</p>
+                    <p style="font-size: 0.8em; color: var(--accent-pink); margin-top:-20px;">(طريقة الكتابة المطلوبة مثال: 10 يناير 2022)</p>
+                    <input type="text" id="q3-input" placeholder="اليوم الشهر السنة">
+                    <br><button id="q3-submit" class="btn-comic">تحقق ✔️</button>
                     
-                     <div style="margin-top: 15px;">
-                        <button id="q3-hint-btn" class="btn-comic btn-hint">💡 تلميح الصورة</button>
-                        <div id="q3-hint-image" class="hint-box hidden" style="padding: 5px;">
-                            <img src="images/q3_hint_moon.jpg" alt="تلميح القمر" class="q-img" style="margin-bottom: 0;" onerror="this.src='https://modo3.com/thumbs/fit630x300/115772/1465918583/%D9%85%D8%A7_%D8%B3%D8%A8%D8%A8_%D8%AD%D8%AF%D9%88%D8%AB_%D8%A3%D8%B7%D9%88%D8%A7%D8%B1_%D8%A7%D9%84%D9%82%D9%85%D8%B1.jpg'">
+                    <div id="q3-hint-area" style="margin-top: 15px;">
+                        <button id="q3-hint-btn" class="btn-comic btn-hint">💡 تلميح</button>
+                        <div id="q3-hint-image" class="hint-box hidden">
+                            <img src="images/q3_hint_moon.jpg" alt="تلميح" class="q-img" style="margin:0;">
                         </div>
                     </div>
 
-                    <div id="q3-feedback" class="feedback"></div>
-                    <button id="q3-next" class="btn-comic btn-next hidden">التالي ✓</button>
+                    <div id="q3-feedback" class="feedback hidden"></div>
+                    <button id="q3-next" class="btn-comic btn-next hidden">التالي ➡️</button>
                 </div>
             </div>
         </div>
 
-        <!-- السؤال 4 -->
+        <!-- الخطوة 4 -->
         <div id="step-4" class="step">
-            <h1 class="main-title" style="font-size: 3rem;">السؤال <span>الرابع</span></h1>
-            
-            <div class="quiz-card" style="border-color: var(--accent-pink);">
-                <div class="card-header" style="background-color: var(--accent-pink);">اختبار الذاكرة ⚠️</div>
+            <div class="quiz-card">
+                <div class="card-header" style="background-color: var(--header-blue);">السؤال 4 / 10</div>
                 <div class="card-body">
-                    <p class="question-text">في يوم الأحد الرابع من مايو ، وصف الكاتب نفسه بسفينةٍ عنيدة أبت أن تستلمً للريح، فسارت عكس اتجاهاها وتياريها لتلقي التحيةً على إحدى الزهور، في هذا اليوم ما الذي كانت ترتديه تلك الزهرة؟</p>
+                    <p class="question-text">في يوم الأحد الرابع من مايو، وصف الكاتب نفسه بسفينةٍ عنيدة أبت أن تستلم للريح، فسارت عكس اتجاهاها وتياريها لتلقي التحية على إحدى الزهور، في هذا اليوم ما الذي كانت ترتديه تلك الزهرة؟</p>
+                    <p style="color: var(--accent-pink); font-size: 0.9em; font-weight: bold;">⚠️ احترس: الخطأ يعرضك لعقاب الانتظار المتصاعد!</p>
 
                     <div class="image-grid">
                         <div class="image-option" data-index="0" style="background-image: url('images/q4_option1.jpg');"></div>
@@ -404,20 +387,19 @@
                         <div class="image-option" data-index="3" style="background-image: url('images/q4_option4.jpg');"></div>
                     </div>
 
-                    <div id="q4-feedback" class="feedback"></div>
-                    <button id="q4-next" class="btn-comic btn-next hidden">التالي ✓</button>
+                    <div id="q4-feedback" class="feedback hidden"></div>
+                    <button id="q4-next" class="btn-comic btn-next hidden">التالي ➡️</button>
                 </div>
             </div>
         </div>
 
-        <!-- السؤال 5 -->
+        <!-- الخطوة 5 -->
         <div id="step-5" class="step">
-            <h1 class="main-title" style="font-size: 3rem;">السؤال <span>الخامس</span></h1>
-            
-            <div class="quiz-card" style="border-color: var(--header-blue);">
-                <div class="card-header" style="background-color: var(--header-blue);">الملاحظة الدقيقة ⚠️</div>
+            <div class="quiz-card">
+                <div class="card-header" style="background-color: var(--header-red);">السؤال 5 / 10</div>
                 <div class="card-body">
                     <p class="question-text">في أحد اجتماعات تحضيرات IEEE DAY اكتشفت الزهرة وجود أحد التطبيقات المألوفة في هاتف أحدهم، ماذا كان يرتدي هذا الشخص؟</p>
+                    <p style="color: var(--accent-pink); font-size: 0.9em; font-weight: bold;">⚠️ عقاب الانتظار ما زال فعالاً!</p>
 
                     <div class="image-grid">
                         <div class="image-option" data-index="0" style="background-image: url('images/q5_option1_correct.jpg');"></div>
@@ -426,149 +408,118 @@
                         <div class="image-option" data-index="3" style="background-image: url('images/q5_option4.jpg');"></div>
                     </div>
 
-                    <div id="q5-feedback" class="feedback"></div>
-                    <button id="q5-next" class="btn-comic btn-next hidden">التالي ✓</button>
+                    <div id="q5-feedback" class="feedback hidden"></div>
+                    <button id="q5-next" class="btn-comic btn-next hidden">التالي ➡️</button>
                 </div>
             </div>
         </div>
 
-        <!-- السؤال 6 (بدون عقوبة زمنية) -->
+        <!-- الخطوة 6 -->
         <div id="step-6" class="step">
-            <h1 class="main-title" style="font-size: 3rem;">السؤال <span>السادس</span></h1>
-            
-            <div class="quiz-card" style="border-color: var(--header-orange);">
-                <div class="card-header" style="background-color: var(--header-orange);">الذاكرة القصيرة</div>
+            <div class="quiz-card">
+                <div class="card-header" style="background-color: var(--header-orange);">السؤال 6 / 10</div>
                 <div class="card-body">
                     <p class="question-text">في إحدى الأيام تغيب اثنان متفوقان عن محاضرتهما، وقاما بعمل اجتماع مهم لمناقشة أمور فريقهم، كان الضوءُ مع الزهرةِ في غرفة الطعام، يحتسي مشروبًا ساخنًا وتحكي الزهرة عن مشاكلها وما حدث معها، في ذلك اليوم ما الذي كان يشربه الضوء؟</p>
-                    
-                    <input type="text" id="q6-input" placeholder="الجواب هنا...">
-                    <button id="q6-submit" class="btn-comic">تحقق!</button>
-                    
-                    <div id="q6-feedback" class="feedback"></div>
+                    <input type="text" id="q6-input" placeholder="اسم المشروب...">
+                    <br><button id="q6-submit" class="btn-comic">تحقق ✔️</button>
                     
                     <div id="q6-hint-area" class="hidden">
                         <button id="q6-hint-btn" class="btn-comic btn-hint">💡 احتاج تلميح</button>
-                        <div id="q6-hint-text" class="hint-box">
-                            التلميح: برج إيفيل
-                        </div>
+                        <div id="q6-hint-text" class="hint-box">التلميح: "برج إيفيل" 🗼</div>
                     </div>
-                    
-                    <button id="q6-next" class="btn-comic btn-next hidden">التالي ✓</button>
+
+                    <div id="q6-feedback" class="feedback hidden"></div>
+                    <button id="q6-next" class="btn-comic btn-next hidden">التالي ➡️</button>
                 </div>
             </div>
         </div>
 
-        <!-- السؤال 7 -->
+        <!-- الخطوة 7 -->
         <div id="step-7" class="step">
-            <h1 class="main-title" style="font-size: 3rem;">السؤال <span>السابع</span></h1>
-            
-            <div class="quiz-card" style="border-color: var(--header-purple);">
-                <div class="card-header" style="background-color: var(--header-purple);">الذكريات</div>
+            <div class="quiz-card">
+                <div class="card-header" style="background-color: var(--header-purple);">السؤال 7 / 10</div>
                 <div class="card-body">
                     <p class="question-text">نوع بسكويت لا يباع في مصر، ترعرع عليه أحدهم وكان يمثل أجمل أيام طفولته، ما اسمه بالإنجليزية؟</p>
+                    <input type="text" id="q7-input" placeholder="اسم البسكويت...">
+                    <br><button id="q7-submit" class="btn-comic">تحقق ✔️</button>
                     
-                    <input type="text" id="q7-input" placeholder="Name in English...">
-                    <button id="q7-submit" class="btn-comic">إجابة!</button>
-                    
-                    <div id="q7-feedback" class="feedback"></div>
-
                     <div id="q7-hint-area" class="hidden">
-                        <button id="q7-hint-btn" class="btn-comic btn-hint">💡 تلميح</button>
-                        <div id="q7-hint-text" class="hint-box">
-                            التلميح: يمكنكم زيارة صفحة الفيسبوك
-                        </div>
+                        <button id="q7-hint-btn" class="btn-comic btn-hint">💡 احتاج تلميح</button>
+                        <div id="q7-hint-text" class="hint-box">التلميح: "يمكنكم زيارة صفحة الفيسبوك"</div>
                     </div>
 
-                    <button id="q7-next" class="btn-comic btn-next hidden">التالي ✓</button>
+                    <div id="q7-feedback" class="feedback hidden"></div>
+                    <button id="q7-next" class="btn-comic btn-next hidden">التالي ➡️</button>
                 </div>
             </div>
         </div>
 
-        <!-- السؤال 8 -->
+        <!-- الخطوة 8 -->
         <div id="step-8" class="step">
-            <h1 class="main-title" style="font-size: 3rem;">السؤال <span>الثامن</span></h1>
-            
-            <div class="quiz-card" style="border-color: var(--header-red);">
-                <div class="card-header" style="background-color: var(--header-red);">الاجتماعات</div>
+            <div class="quiz-card">
+                <div class="card-header" style="background-color: var(--header-green);">السؤال 8 / 10</div>
                 <div class="card-body">
-                    <p class="question-text">في رمضان 2026، تم عقد اجتماع لمناقشة الأمور المتعلقة بالأيديهات، وكان في هذا الاجتماع الكثير من التفاصيل الصعبة المجهدة في النقاش، ما الشيء الذي نسيته الزهرة في هذا الاجتماع وأخذته في وقتٍ لاحق ؟</p>
-                    
-                    <input type="text" id="q8-input" placeholder="الجواب...">
-                    <button id="q8-submit" class="btn-comic">تأكيد!</button>
-                    
-                    <div id="q8-feedback" class="feedback"></div>
-                    <button id="q8-next" class="btn-comic btn-next hidden">التالي ✓</button>
+                    <p class="question-text">في رمضان 2026، تم عقد اجتماع لمناقشة الأمور المتعلقة بالأيديهات، وكان في هذا الاجتماع الكثير من التفاصيل الصعبة المجهدة في النقاش، ما الشيء الذي نسيته الزهرة في هذا الاجتماع وأخذته في وقتٍ لاحق؟</p>
+                    <input type="text" id="q8-input" placeholder="الشيء الذي نسيته...">
+                    <br><button id="q8-submit" class="btn-comic">تحقق ✔️</button>
+                    <div id="q8-feedback" class="feedback hidden"></div>
+                    <button id="q8-next" class="btn-comic btn-next hidden">التالي ➡️</button>
                 </div>
             </div>
         </div>
 
-        <!-- السؤال 9 -->
+        <!-- الخطوة 9 -->
         <div id="step-9" class="step">
-            <h1 class="main-title" style="font-size: 3rem;">السؤال <span>التاسع</span></h1>
-            <div class="subtitle-banner" style="transform: rotate(2deg);">السؤال قبل الأخير!</div>
-            
-            <div class="quiz-card" style="border-color: var(--header-blue);">
-                <div class="card-header" style="background-color: var(--header-blue);">اللغز</div>
+            <div class="quiz-card">
+                <div class="card-header" style="background-color: var(--header-blue);">السؤال 9 / 10</div>
                 <div class="card-body">
-                    <p class="question-text" style="text-align:center;">يرجى إدخال الإجابة الصحيحة للاستمرار</p>
-                    <img src="images/q9_question.jpg" alt="صورة اللغز" class="q-img" onerror="this.src='https://placehold.co/400x300/3B82F6/ffffff?text=صورة+الباركود'">
-                    
+                    <p class="question-text">يرجى إدخال الإجابة الصحيحة للاستمرار</p>
+                    <img src="images/q9_question.jpg" alt="لغز الصورة" class="q-img">
                     <input type="text" id="q9-input" placeholder="الإجابة...">
-                    <button id="q9-submit" class="btn-comic">تحقق!</button>
+                    <br><button id="q9-submit" class="btn-comic">تحقق ✔️</button>
                     
-                    <div id="q9-feedback" class="feedback"></div>
-
-                    <!-- التلميحات -->
-                    <div id="q9-hint-area1" class="hidden" style="margin-top: 10px;">
-                        <button id="q9-hint-btn1" class="btn-comic btn-hint">💡 تلميح 1</button>
-                        <div id="q9-hint-text1" class="hint-box">
-                            في ظهر النوت التي تم استلامها قبل 364 يوم
-                        </div>
+                    <div id="q9-hint-area1" class="hidden">
+                        <button id="q9-hint-btn1" class="btn-comic btn-hint">💡 تلميح أول</button>
+                        <div id="q9-hint-text1" class="hint-box">التلميح: "في ظهر النوت التي تم استلامها قبل 364 يوم"</div>
                     </div>
-                    <div id="q9-hint-area2" class="hidden" style="margin-top:10px;">
-                        <button id="q9-hint-btn2" class="btn-comic btn-hint">💡 تلميح 2 (صورة)</button>
-                        <div id="q9-hint-image2" class="hint-box" style="padding: 5px;">
-                            <img src="images/q9_hint2.jpg" alt="تلميح إضافي" class="q-img" style="margin-bottom:0;" onerror="this.src='https://placehold.co/400x200/F97316/ffffff?text=تلميح+الصورة+الثاني'">
+
+                    <div id="q9-hint-area2" class="hidden" style="margin-top: 10px;">
+                        <button id="q9-hint-btn2" class="btn-comic btn-hint">💡 تلميح أخير</button>
+                        <div id="q9-hint-image2" class="hint-box hidden">
+                            <img src="images/q9_hint2.jpg" alt="تلميح 2" class="q-img" style="margin:0;">
                         </div>
                     </div>
 
-                    <button id="q9-next" class="btn-comic btn-next hidden">التالي ✓</button>
+                    <div id="q9-feedback" class="feedback hidden"></div>
+                    <button id="q9-next" class="btn-comic btn-next hidden">التالي ➡️</button>
                 </div>
             </div>
         </div>
 
-        <!-- السؤال 10 -->
+        <!-- الخطوة 10 -->
         <div id="step-10" class="step">
-            <h1 class="main-title" style="font-size: 3rem;">السؤال <span>الأخير</span></h1>
-            
-            <div class="quiz-card" style="border-color: var(--accent-pink);">
-                <div class="card-header" style="background-color: var(--accent-pink);">النزاهة والمصداقية</div>
+            <div class="quiz-card">
+                <div class="card-header" style="background-color: var(--header-red);">السؤال الأخير! 🏆</div>
                 <div class="card-body">
                     <p class="question-text">ما اسم المكان الجديد الذي اشتريتي منه نوع الشوكولاته الجديد؟</p>
-                    <p style="font-size: 0.9em; color: #666; margin-top:-15px; margin-bottom: 20px; line-height: 1.4;">(يرجى العلم أن النزاهة كانت شرطًا أساسيًا في هذه الأسئلة، الزهرةُ لا تكذب أبدًا، سأترك هذا الجواب لكِ ولمصداقيتك)</p>
+                    <p style="font-size: 0.85em; color: #666; margin-top:-15px;">(يرجى العلم أن النزاهة كانت شرطًا أساسيًا في هذه الأسئلة، الزهرةُ لا تكذب أبدًا، سأترك هذا الجواب لكِ ولمصداقيتك)</p>
                     
-                    <input type="text" id="q10-input" placeholder="المكان هو...">
-                    <button id="q10-submit" class="btn-comic">إرسال الجواب</button>
+                    <input type="text" id="q10-input" placeholder="اكتب إجابتك هنا بصراحة...">
+                    <div id="q10-feedback" class="feedback" style="font-size: 1.5rem; color: var(--accent-pink); background:none; border:none;"></div>
                     
-                    <div id="q10-feedback" class="feedback"></div>
-                    
-                    <button id="q10-next" class="btn-comic btn-next hidden">إنهاء التحدي ✓</button>
+                    <button id="q10-next" class="btn-comic" style="width: 100%; margin-top: 20px;">تأكيد الإجابة</button>
                 </div>
             </div>
         </div>
 
-        <!-- النهاية -->
+        <!-- شاشة النهاية المضحكة -->
         <div id="step-final" class="step">
-            <h1 class="main-title" style="font-size: 3.5rem;">التقييم <span>النهائي</span></h1>
-            
-            <div class="quiz-card" style="transform: rotate(0); text-align: right; border-color: var(--border-dark);">
-                <div class="card-header" style="background-color: var(--border-dark);">النتيجة</div>
+            <h1 class="main-title" style="font-size: 3rem;">🕵️‍♂️ <span>لحظة واحدة!</span></h1>
+            <div class="quiz-card" style="transform: rotate(0deg);">
                 <div class="card-body">
-                    <p style="font-size: 1.4rem; font-weight: 700; line-height: 1.8;">
-                        مصداقية ايه وجواب ايه الي اسيبه، الله أعلم كاتبه ايه وبتحاول تهربي من السؤال! 😂
-                        <br><br>
-                        سيتم مراجعة الإجابة من قبل الضوء، ولو عجبته الإجابة هيديلك الجائزة، برجاء الذهاب وعمل أي حاجة لحد ما حضرته يقيم الإجابة بنفسه.
-                        <br><br>
+                    <p style="font-size: 1.4rem; text-align: right; line-height: 1.8;">
+                        مصداقية ايه وجواب ايه الي اسيبه، الله أعلم كاتبه ايه وبتحاول تهربي من السؤال!<br><br>
+                        سيتم مراجعة الإجابة من قبل الضوء، ولو عجبته الإجابة هيديلك الجائزة برجاء الذهاب وعمل أي حاجة لحد ما حضرته يقيم الإجابة بنفسه.<br><br>
                         سلام 👋
                     </p>
                 </div>
@@ -578,315 +529,267 @@
     </div>
 
     <script>
-        // --- دوال الرادار وتسجيل البيانات ---
-        function detectAndSaveDevice() {
-            const ua = navigator.userAgent;
-            let device = "لابتوب / كمبيوتر (Desktop)";
-            let os = "غير معروف";
+        // --- الرابط لسكربت جوجل ---
+        const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwyc3s8U4shu8nF9PV4mKpLRu68CkHdgZsyQAgeZXllwaxhBjgacD_tQcgVDa2lJw0R4Q/exec";
 
-            if (/(tablet|ipad|playbook|silk)|(android(?!.*mobi))/i.test(ua)) device = "تابلت (Tablet)";
-            else if (/Mobile|Android|iP(hone|od)/.test(ua)) device = "موبايل (Mobile)";
-            
-            if (ua.indexOf("Win") !== -1) os = "Windows";
-            else if (ua.indexOf("Mac") !== -1) os = "MacOS / iOS";
-            else if (ua.indexOf("Android") !== -1) os = "Android";
-            else if (ua.indexOf("Linux") !== -1) os = "Linux";
-
-            localStorage.setItem('quiz_device_type', device);
-            localStorage.setItem('quiz_os_type', os);
-        }
-        
-        detectAndSaveDevice();
-
-        function logActivity(type, detail) {
-            let logs = JSON.parse(localStorage.getItem('quiz_activity_log') || '[]');
-            let now = new Date();
-            let timeString = now.getHours() + ":" + String(now.getMinutes()).padStart(2, '0') + ":" + String(now.getSeconds()).padStart(2, '0');
-            
-            logs.push({ time: timeString, type: type, detail: detail });
-            localStorage.setItem('quiz_activity_log', JSON.stringify(logs));
-            localStorage.setItem('quiz_last_active', timeString);
-        }
-
-        // --- المتغيرات والتنقل ---
         let currentStep = 0;
-        let q1Attempts = 0, lastQ1Answer = "";
-        let q4Attempts = 0, q5Attempts = 0, q6Attempts = 0, q7Attempts = 0, q9Attempts = 0;
-        let q10State = 0;
-        let isPenaltyActive = false;
-
+        
         function showStep(stepNumber) {
             document.querySelectorAll('.step').forEach(step => step.classList.remove('active'));
-            document.getElementById('step-' + stepNumber).classList.add('active');
+            let targetStep = stepNumber === 'final' ? 'final' : stepNumber;
+            document.getElementById('step-' + targetStep).classList.add('active');
             currentStep = stepNumber;
             window.scrollTo(0, 0);
+        }
+
+        function showFeedback(element, msg, isSuccess) {
+            element.textContent = msg;
+            element.className = `feedback ${isSuccess ? 'success-msg' : 'error-msg'}`;
+            element.classList.remove('hidden');
+        }
+
+        // --- عقوبة الزمن (للأسئلة 4 و 5) ---
+        let isPenaltyActive = false;
+        const penaltyOverlay = document.getElementById('penalty-overlay');
+        const timerDisplay = document.getElementById('timer');
+
+        function startPenaltyTimer(minutes) {
+            isPenaltyActive = true;
+            penaltyOverlay.style.display = 'flex';
+            let secondsRemaining = minutes * 60;
+            updateTimerDisplay(secondsRemaining);
             
-            // تسجيل الخطوة في الرادار
-            localStorage.setItem('quiz_current_step', stepNumber === 'final' ? 11 : stepNumber);
-            let now = new Date();
-            localStorage.setItem('quiz_last_active', now.getHours() + ":" + String(now.getMinutes()).padStart(2, '0') + ":" + String(now.getSeconds()).padStart(2, '0'));
+            const countdown = setInterval(() => {
+                secondsRemaining--;
+                updateTimerDisplay(secondsRemaining);
+                if (secondsRemaining <= 0) {
+                    clearInterval(countdown);
+                    penaltyOverlay.style.display = 'none';
+                    isPenaltyActive = false;
+                }
+            }, 1000);
+        }
+        function updateTimerDisplay(seconds) {
+            const m = Math.floor(seconds / 60).toString().padStart(2, '0');
+            const s = (seconds % 60).toString().padStart(2, '0');
+            timerDisplay.textContent = `${m}:${s}`;
         }
 
         // --- الخطوة 0 ---
-        const pledgeCheckbox = document.getElementById('pledge-checkbox');
         const startBtn = document.getElementById('start-btn');
-        pledgeCheckbox.addEventListener('change', function() { startBtn.disabled = !this.checked; });
-        startBtn.addEventListener('click', () => {
-            logActivity('تلميح', 'وافقت على التعهد وبدأت المسابقة!');
-            showStep(1);
+        document.getElementById('pledge-checkbox').addEventListener('change', function() {
+            startBtn.disabled = !this.checked;
         });
+        startBtn.addEventListener('click', () => showStep(1));
 
-        // --- السؤال 1 ---
-        const q1Input = document.getElementById('q1-input'), q1Submit = document.getElementById('q1-submit'), q1Feedback = document.getElementById('q1-feedback'), q1Next = document.getElementById('q1-next');
+        // --- الخطوة 1 ---
+        let q1Attempts = 0;
+        let lastQ1Answer = "";
+        const q1Submit = document.getElementById('q1-submit'), q1Input = document.getElementById('q1-input'), q1Feedback = document.getElementById('q1-feedback'), q1Next = document.getElementById('q1-next');
+        
         q1Submit.addEventListener('click', function() {
             let answer = q1Input.value.trim();
-            q1Feedback.className = 'feedback';
-            if (answer === "الياسمينا" || answer === "ياسمينا دي أو دي") {
-                q1Feedback.textContent = "إجابة صحيحة! أحسنت 🎉"; q1Feedback.classList.add('success-msg');
+            if (answer === "ياسمينا" || answer === "ياسمينا دي أو دي") {
+                showFeedback(q1Feedback, "إجابة صحيحة! أحسنت 🎉", true);
                 q1Submit.classList.add('hidden'); q1Next.classList.remove('hidden'); q1Input.disabled = true;
-                logActivity('صحيح', `السؤال 1: أجابت إجابة صحيحة (${answer})`);
             } else {
-                q1Attempts++; q1Feedback.classList.add('error-msg');
-                logActivity('خطأ', `السؤال 1: كتبت (${answer})`);
+                q1Attempts++;
                 if (answer === "الياسمين") {
-                    q1Feedback.textContent = (lastQ1Answer === "ياسمين") ? "والله ؟ ، يعني هي فرقت لما حطينا ال التعريف، برضو غلط" : "هههههه مش بالسهولة دي إجابة خاطئة";
+                    showFeedback(q1Feedback, lastQ1Answer === "ياسمين" ? "والله ؟ ، يعني هي فرقت لما حطينا ال التعريف، برضو غلط 😂" : "هههههه مش بالسهولة دي إجابة خاطئة", false);
                 } else if (answer === "ياسمين") {
-                    q1Feedback.textContent = (lastQ1Answer === "الياسمين") ? "والله ؟ ، يعني هي فرقت لما شلنا ال التعريف، برضو غلط" : "هههههه مش بالسهولة دي إجابة خاطئة";
-                } else { q1Feedback.textContent = "إجابة خاطئة، حاول مرة أخرى!"; }
+                    showFeedback(q1Feedback, lastQ1Answer === "الياسمين" ? "والله ؟ ، يعني هي فرقت لما شلنا ال التعريف، برضو غلط 😂" : "هههههه مش بالسهولة دي إجابة خاطئة", false);
+                } else {
+                    showFeedback(q1Feedback, "إجابة خاطئة، حاول مرة أخرى!", false);
+                }
                 lastQ1Answer = answer;
                 if (q1Attempts > 6) document.getElementById('q1-hint-area').classList.remove('hidden');
             }
         });
         document.getElementById('q1-hint-btn').addEventListener('click', function() {
             document.getElementById('q1-hint-text').style.display = 'block'; this.style.display = 'none';
-            logActivity('تلميح', 'فتحت تلميح السؤال الأول');
         });
         q1Next.addEventListener('click', () => showStep(2));
 
-        // --- السؤال 2 (ربط إرسال الإيميل) ---
-        const q2Input = document.getElementById('q2-input'), q2Submit = document.getElementById('q2-submit'), q2Feedback = document.getElementById('q2-feedback'), q2Next = document.getElementById('q2-next');
+        // --- الخطوة 2 (مع إرسال الإيميل) ---
+        const q2Submit = document.getElementById('q2-submit'), q2Input = document.getElementById('q2-input'), q2Feedback = document.getElementById('q2-feedback'), q2Next = document.getElementById('q2-next');
         q2Submit.addEventListener('click', function() {
-            let answer = q2Input.value.trim();
-            q2Feedback.className = 'feedback';
-            if (answer === "ياسمين علاء") {
-                q2Feedback.textContent = "صحيح!"; q2Feedback.classList.add('success-msg');
+            if (q2Input.value.trim() === "ياسمين علاء") {
+                showFeedback(q2Feedback, "صحيح! هذه هي ياسمين علاء.", true);
                 q2Submit.classList.add('hidden'); q2Next.classList.remove('hidden'); q2Input.disabled = true;
-                logActivity('صحيح', `السؤال 2: أجابت إجابة صحيحة (${answer})`);
-            } else {
-                q2Feedback.textContent = "خطأ، تأكد من الاسم."; q2Feedback.classList.add('error-msg');
-                logActivity('خطأ', `السؤال 2: كتبت (${answer})`);
-            }
+            } else showFeedback(q2Feedback, "خطأ، تأكد من الاسم الثنائي.", false);
         });
 
-        // ربط السكربت بالكود 123
-        const q2HelpBtn = document.getElementById('q2-help-btn');
-        const q2Passcode = document.getElementById('q2-passcode');
-        const q2HelpMsg = document.getElementById('q2-help-msg');
+        // ربط السكربت بإرسال إيميل التلميح (action=hint)
+        const q2HelpBtn = document.getElementById('q2-help-btn'), q2Passcode = document.getElementById('q2-passcode'), q2HelpMsg = document.getElementById('q2-help-msg');
         q2HelpBtn.addEventListener('click', function() {
             const codeEntered = q2Passcode.value.trim();
             if (codeEntered !== "123") {
-                q2HelpMsg.textContent = "❌ الكود غير صحيح، لا يمكنك الإرسال!"; q2HelpMsg.className = "feedback error-msg";
-                logActivity('خطأ', `السؤال 2: حاولت الإرسال بكود خاطئ (${codeEntered})`); return;
+                showFeedback(q2HelpMsg, "❌ الكود غير صحيح، لا يمكنك الإرسال!", false);
+                return;
             }
-            this.disabled = true; this.textContent = "⏳ جاري الإرسال..."; q2HelpMsg.textContent = "";
-            logActivity('تلميح', `جاري إرسال الإيميل لجوجل...`);
+            this.disabled = true; this.textContent = "⏳ جاري الإرسال..."; q2HelpMsg.classList.add('hidden');
+            const finalUrl = GOOGLE_SCRIPT_URL + "?action=hint&code=" + encodeURIComponent(codeEntered);
 
-            // رابط السكربت
-            const scriptUrl = "https://script.google.com/macros/s/AKfycbwro3OAwFSGOTS6gI_ui3RmpKEqX02u3fkndZukKJjFFzoBMNlC_cUaX7VIVmYMnRB4wg/exec";
-            const finalUrl = scriptUrl + "?code=" + encodeURIComponent(codeEntered);
-
-            fetch(finalUrl)
-            .then(response => response.json())
-            .then(data => {
+            fetch(finalUrl).then(r => r.json()).then(data => {
                 if(data.status === 'success') {
-                    this.textContent = "✅ تم الإرسال للإيميل!"; this.style.backgroundColor = "var(--header-green)"; q2Passcode.disabled = true;
-                    logActivity('صحيح', `تم إرسال إيميل جوجل درايف بنجاح!`);
+                    this.textContent = "✅ تم الإرسال للإيميل!"; this.style.backgroundColor = "var(--header-green)"; this.style.color="white"; q2Passcode.disabled = true;
                 } else {
-                    q2HelpMsg.textContent = data.message; q2HelpMsg.className = "feedback error-msg"; this.textContent = "🆘 حاول مجدداً"; this.disabled = false;
-                    logActivity('خطأ', `السؤال 2: فشل إرسال الإيميل (رُفض من السكربت)`);
+                    showFeedback(q2HelpMsg, data.message || "فشل الإرسال", false); this.textContent = "🆘 حاول مجدداً"; this.disabled = false;
                 }
-            }).catch(error => {
-                q2HelpMsg.textContent = "❌ حدث خطأ في الاتصال بالإنترنت"; q2HelpMsg.className = "feedback error-msg"; this.textContent = "🆘 حاول مجدداً"; this.disabled = false;
-                logActivity('خطأ', `السؤال 2: فشل إرسال الإيميل (مشكلة في الاتصال)`);
+            }).catch(e => {
+                showFeedback(q2HelpMsg, "❌ خطأ في الاتصال بالإنترنت", false); this.textContent = "🆘 حاول مجدداً"; this.disabled = false;
             });
         });
         q2Next.addEventListener('click', () => showStep(3));
 
-        // --- السؤال 3 ---
-        const q3Input = document.getElementById('q3-input'), q3Submit = document.getElementById('q3-submit'), q3Feedback = document.getElementById('q3-feedback'), q3Next = document.getElementById('q3-next'), q3HintBtn = document.getElementById('q3-hint-btn');
+        // --- الخطوة 3 ---
+        const q3Submit = document.getElementById('q3-submit'), q3Input = document.getElementById('q3-input'), q3Feedback = document.getElementById('q3-feedback'), q3Next = document.getElementById('q3-next');
         q3Submit.addEventListener('click', function() {
-            let answer = q3Input.value.trim();
-            q3Feedback.className = 'feedback';
-            if (answer.replace(/\s+/g, ' ') === "14 ديسمبر 2024" || answer === "14 ديسمبر2024") {
-                q3Feedback.textContent = "إجابة دقيقة!"; q3Feedback.classList.add('success-msg');
-                q3Submit.classList.add('hidden'); q3Next.classList.remove('hidden'); q3Input.disabled = true; q3HintBtn.classList.add('hidden');
-                logActivity('صحيح', `السؤال 3: أجابت إجابة صحيحة (${answer})`);
-            } else {
-                q3Feedback.textContent = "تاريخ غير صحيح."; q3Feedback.classList.add('error-msg');
-                logActivity('خطأ', `السؤال 3: كتبت تاريخ خطأ (${answer})`);
-            }
+            if (q3Input.value.trim() === "14 ديسمبر 2024") {
+                showFeedback(q3Feedback, "تاريخ دقيق! إجابة صحيحة.", true);
+                q3Submit.classList.add('hidden'); q3Next.classList.remove('hidden'); q3Input.disabled = true; document.getElementById('q3-hint-btn').classList.add('hidden');
+            } else showFeedback(q3Feedback, "التاريخ غير صحيح، تأكد من التنسيق (يوم شهر سنة).", false);
         });
-        q3HintBtn.addEventListener('click', function() {
+        document.getElementById('q3-hint-btn').addEventListener('click', function() {
             document.getElementById('q3-hint-image').classList.remove('hidden'); this.classList.add('hidden');
-            logActivity('تلميح', 'فتحت تلميح الصورة (أطوار القمر) للسؤال 3');
         });
         q3Next.addEventListener('click', () => showStep(4));
 
-        // --- دوال العقاب الزمني للأسئلة 4 و 5 ---
-        const penaltyOverlay = document.getElementById('penalty-overlay');
-        const timerDisplay = document.getElementById('timer');
-        function startPenaltyTimer(minutes, questionNum) {
-            isPenaltyActive = true; penaltyOverlay.style.display = 'flex';
-            let secondsRemaining = minutes * 60;
-            logActivity('عقوبة', `السؤال ${questionNum}: أخذت عقوبة انتظار لمدة ${minutes} دقيقة!`);
-            
-            function updateTimerDisplay(seconds) {
-                timerDisplay.textContent = Math.floor(seconds / 60).toString().padStart(2, '0') + ":" + (seconds % 60).toString().padStart(2, '0');
-            }
-            updateTimerDisplay(secondsRemaining);
-            const countdown = setInterval(() => {
-                secondsRemaining--; updateTimerDisplay(secondsRemaining);
-                if (secondsRemaining <= 0) { clearInterval(countdown); penaltyOverlay.style.display = 'none'; isPenaltyActive = false; }
-            }, 1000);
-        }
-
-        // --- السؤال 4 (عقاب) ---
-        const q4Options = document.querySelectorAll('#step-4 .image-option'), q4Feedback = document.getElementById('q4-feedback'), q4Next = document.getElementById('q4-next');
-        const q4CorrectIndex = 2; // يسار أسفل
-        q4Options.forEach(option => {
+        // --- الخطوة 4 (عقاب زمني) ---
+        let q4Attempts = 0; const q4Next = document.getElementById('q4-next');
+        document.querySelectorAll('#step-4 .image-option').forEach(option => {
             option.addEventListener('click', function() {
-                if (isPenaltyActive || q4Next.classList.contains('hidden') === false) return;
-                const selectedIndex = parseInt(this.getAttribute('data-index'));
-                q4Feedback.className = 'feedback';
-                if (selectedIndex === q4CorrectIndex) {
-                    this.classList.add('selected-correct'); q4Feedback.textContent = "صحيح."; q4Feedback.classList.add('success-msg'); q4Next.classList.remove('hidden'); q4Options.forEach(opt => opt.style.pointerEvents = 'none');
-                    logActivity('صحيح', `السؤال 4: اختارت الصورة الصحيحة`);
+                if (isPenaltyActive || !q4Next.classList.contains('hidden')) return;
+                const fb = document.getElementById('q4-feedback');
+                if (parseInt(this.getAttribute('data-index')) === 2) { 
+                    this.classList.add('selected-correct'); showFeedback(fb, "إجابة بصرية مذهلة! صحيح.", true); q4Next.classList.remove('hidden');
                 } else {
-                    this.classList.add('selected-wrong'); q4Attempts++; q4Feedback.textContent = `خطأ! عقاب لمدة ${q4Attempts} دقيقة.`; q4Feedback.classList.add('error-msg');
-                    logActivity('خطأ', `السؤال 4: اختارت صورة خاطئة رقم ${selectedIndex + 1}`);
-                    setTimeout(() => { this.classList.remove('selected-wrong'); startPenaltyTimer(q4Attempts, 4); }, 800);
+                    this.classList.add('selected-wrong'); q4Attempts++;
+                    showFeedback(fb, `إجابة خاطئة! استعد لعقاب الانتظار رقم ${q4Attempts}.`, false);
+                    setTimeout(() => { this.classList.remove('selected-wrong'); startPenaltyTimer(q4Attempts); }, 800);
                 }
             });
         });
         q4Next.addEventListener('click', () => showStep(5));
 
-        // --- السؤال 5 (عقاب) ---
-        const q5Options = document.querySelectorAll('#step-5 .image-option'), q5Feedback = document.getElementById('q5-feedback'), q5Next = document.getElementById('q5-next');
-        const q5CorrectIndex = 0; // الأول من اليمين 
-        q5Options.forEach(option => {
+        // --- الخطوة 5 (عقاب زمني) ---
+        let q5Attempts = 0; const q5Next = document.getElementById('q5-next');
+        document.querySelectorAll('#step-5 .image-option').forEach(option => {
             option.addEventListener('click', function() {
-                if (isPenaltyActive || q5Next.classList.contains('hidden') === false) return;
-                const selectedIndex = parseInt(this.getAttribute('data-index'));
-                q5Feedback.className = 'feedback';
-                if (selectedIndex === q5CorrectIndex) {
-                    this.classList.add('selected-correct'); q5Feedback.textContent = "إجابة صحيحة."; q5Feedback.classList.add('success-msg'); q5Next.classList.remove('hidden'); q5Options.forEach(opt => opt.style.pointerEvents = 'none');
-                    logActivity('صحيح', `السؤال 5: اختارت الصورة الصحيحة`);
+                if (isPenaltyActive || !q5Next.classList.contains('hidden')) return;
+                const fb = document.getElementById('q5-feedback');
+                if (parseInt(this.getAttribute('data-index')) === 0) { 
+                    this.classList.add('selected-correct'); showFeedback(fb, "تركيز رائع! إجابة صحيحة.", true); q5Next.classList.remove('hidden');
                 } else {
-                    this.classList.add('selected-wrong'); q5Attempts++; q5Feedback.textContent = `خطأ! عقاب لمدة ${q5Attempts} دقيقة.`; q5Feedback.classList.add('error-msg');
-                    logActivity('خطأ', `السؤال 5: اختارت صورة خاطئة رقم ${selectedIndex + 1}`);
-                    setTimeout(() => { this.classList.remove('selected-wrong'); startPenaltyTimer(q5Attempts, 5); }, 800);
+                    this.classList.add('selected-wrong'); q5Attempts++;
+                    showFeedback(fb, `لا! ليست هذه. العقاب رقم ${q5Attempts} قادم.`, false);
+                    setTimeout(() => { this.classList.remove('selected-wrong'); startPenaltyTimer(q5Attempts); }, 800);
                 }
             });
         });
         q5Next.addEventListener('click', () => showStep(6));
 
-        // --- السؤال 6 (بدون عقوبة زمنية بناءً على الطلب الأخير) ---
-        const q6Input = document.getElementById('q6-input'), q6Submit = document.getElementById('q6-submit'), q6Feedback = document.getElementById('q6-feedback'), q6Next = document.getElementById('q6-next'), q6HintArea = document.getElementById('q6-hint-area');
+        // --- الخطوة 6 (بدون عقاب) ---
+        let q6Attempts = 0; const q6Submit = document.getElementById('q6-submit'), q6Input = document.getElementById('q6-input'), q6Feedback = document.getElementById('q6-feedback'), q6Next = document.getElementById('q6-next');
         q6Submit.addEventListener('click', function() {
-            let answer = q6Input.value.trim(); q6Feedback.className = 'feedback';
-            if (answer === "قهوة فرنسية") {
-                q6Feedback.textContent = (q6Attempts === 0) ? "واو معلوماتك فعلا كويسة ما شاء الله 🎉" : "إجابة صحيحة! أحسنت 🎉";
-                q6Feedback.classList.add('success-msg'); q6Submit.classList.add('hidden'); q6Next.classList.remove('hidden'); q6Input.disabled = true;
-                logActivity('صحيح', `السؤال 6: أجابت إجابة صحيحة (${answer})`);
+            if (q6Input.value.trim() === "قهوة فرنسية") {
+                showFeedback(q6Feedback, q6Attempts === 0 ? "واو معلوماتك فعلا كويسة ما شاء الله 🎉" : "إجابة صحيحة!", true);
+                q6Submit.classList.add('hidden'); q6Next.classList.remove('hidden'); q6Input.disabled = true;
             } else {
-                q6Attempts++; q6Feedback.textContent = "إجابة خاطئة، حاول مرة أخرى."; q6Feedback.classList.add('error-msg');
-                logActivity('خطأ', `السؤال 6: كتبت (${answer})`);
-                if (q6Attempts >= 3) q6HintArea.classList.remove('hidden');
+                q6Attempts++; showFeedback(q6Feedback, "إجابة خاطئة، حاولي مجدداً", false);
+                if (q6Attempts >= 3) document.getElementById('q6-hint-area').classList.remove('hidden');
             }
         });
         document.getElementById('q6-hint-btn').addEventListener('click', function() {
             document.getElementById('q6-hint-text').style.display = 'block'; this.style.display = 'none';
-            logActivity('تلميح', 'فتحت تلميح السؤال 6 (برج إيفيل)');
         });
         q6Next.addEventListener('click', () => showStep(7));
 
-        // --- السؤال 7 ---
-        const q7Input = document.getElementById('q7-input'), q7Submit = document.getElementById('q7-submit'), q7Feedback = document.getElementById('q7-feedback'), q7Next = document.getElementById('q7-next'), q7HintArea = document.getElementById('q7-hint-area');
+        // --- الخطوة 7 ---
+        let q7Attempts = 0; const q7Submit = document.getElementById('q7-submit'), q7Input = document.getElementById('q7-input'), q7Feedback = document.getElementById('q7-feedback'), q7Next = document.getElementById('q7-next');
         q7Submit.addEventListener('click', function() {
-            let answer = q7Input.value.trim().toLowerCase(); q7Feedback.className = 'feedback';
-            if (answer === "sando") {
-                q7Feedback.textContent = "إجابة صحيحة! 🍪"; q7Feedback.classList.add('success-msg');
+            if (q7Input.value.trim().toLowerCase() === "sando") {
+                showFeedback(q7Feedback, "إجابة صحيحة!", true);
                 q7Submit.classList.add('hidden'); q7Next.classList.remove('hidden'); q7Input.disabled = true;
-                logActivity('صحيح', `السؤال 7: أجابت إجابة صحيحة (${answer})`);
             } else {
-                q7Attempts++; q7Feedback.textContent = "خطأ، حاول مرة أخرى."; q7Feedback.classList.add('error-msg');
-                logActivity('خطأ', `السؤال 7: كتبت (${answer})`);
-                if (q7Attempts >= 3) q7HintArea.classList.remove('hidden');
+                q7Attempts++; showFeedback(q7Feedback, "خطأ، تذكري الاسم جيداً", false);
+                if (q7Attempts >= 3) document.getElementById('q7-hint-area').classList.remove('hidden');
             }
         });
         document.getElementById('q7-hint-btn').addEventListener('click', function() {
             document.getElementById('q7-hint-text').style.display = 'block'; this.style.display = 'none';
-            logActivity('تلميح', 'فتحت تلميح السؤال 7 (صفحة الفيسبوك)');
         });
         q7Next.addEventListener('click', () => showStep(8));
 
-        // --- السؤال 8 ---
-        const q8Input = document.getElementById('q8-input'), q8Submit = document.getElementById('q8-submit'), q8Feedback = document.getElementById('q8-feedback'), q8Next = document.getElementById('q8-next');
+        // --- الخطوة 8 ---
+        const q8Submit = document.getElementById('q8-submit'), q8Input = document.getElementById('q8-input'), q8Feedback = document.getElementById('q8-feedback'), q8Next = document.getElementById('q8-next');
         q8Submit.addEventListener('click', function() {
-            let answer = q8Input.value.trim(); q8Feedback.className = 'feedback';
-            let validAnswers = ["قلم", "القلم", "قلم حبر"];
-            if (validAnswers.includes(answer)) {
-                q8Feedback.textContent = "بالضبط! إجابة صحيحة."; q8Feedback.classList.add('success-msg');
+            let ans = q8Input.value.trim();
+            if (ans === "قلم" || ans === "القلم" || ans === "قلم حبر") {
+                showFeedback(q8Feedback, "صحيح! الذاكرة قوية.", true);
                 q8Submit.classList.add('hidden'); q8Next.classList.remove('hidden'); q8Input.disabled = true;
-                logActivity('صحيح', `السؤال 8: أجابت إجابة صحيحة (${answer})`);
-            } else {
-                q8Feedback.textContent = "خطأ، ركز في التفاصيل!"; q8Feedback.classList.add('error-msg');
-                logActivity('خطأ', `السؤال 8: كتبت (${answer})`);
-            }
+            } else showFeedback(q8Feedback, "إجابة خاطئة.", false);
         });
         q8Next.addEventListener('click', () => showStep(9));
 
-        // --- السؤال 9 ---
-        const q9Input = document.getElementById('q9-input'), q9Submit = document.getElementById('q9-submit'), q9Feedback = document.getElementById('q9-feedback'), q9Next = document.getElementById('q9-next');
-        const q9HintArea1 = document.getElementById('q9-hint-area1'), q9HintArea2 = document.getElementById('q9-hint-area2');
+        // --- الخطوة 9 ---
+        let q9Attempts = 0; const q9Submit = document.getElementById('q9-submit'), q9Input = document.getElementById('q9-input'), q9Feedback = document.getElementById('q9-feedback'), q9Next = document.getElementById('q9-next');
         q9Submit.addEventListener('click', function() {
-            let answer = q9Input.value.trim(); q9Feedback.className = 'feedback';
-            if (answer === "8697439305305") {
-                q9Feedback.textContent = "إجابة صحيحة! برافو."; q9Feedback.classList.add('success-msg');
+            if (q9Input.value.trim() === "8697439305305") {
+                showFeedback(q9Feedback, "عبقرية! إجابة صحيحة.", true);
                 q9Submit.classList.add('hidden'); q9Next.classList.remove('hidden'); q9Input.disabled = true;
-                logActivity('صحيح', `السؤال 9: حلت اللغز بشكل صحيح (${answer})`);
             } else {
-                q9Attempts++; q9Feedback.textContent = "الرقم غير صحيح، حاول مجدداً."; q9Feedback.classList.add('error-msg');
-                logActivity('خطأ', `السؤال 9: أدخلت رقم خطأ (${answer})`);
-                if (q9Attempts >= 4) q9HintArea1.classList.remove('hidden');
-                if (q9Attempts >= 6) q9HintArea2.classList.remove('hidden');
+                q9Attempts++; showFeedback(q9Feedback, "الرقم غير صحيح.", false);
+                if (q9Attempts === 4) document.getElementById('q9-hint-area1').classList.remove('hidden');
+                if (q9Attempts === 6) document.getElementById('q9-hint-area2').classList.remove('hidden');
             }
         });
-        document.getElementById('q9-hint-btn1').addEventListener('click', function() { document.getElementById('q9-hint-text1').style.display = 'block'; this.style.display = 'none'; logActivity('تلميح', 'فتحت تلميح 1 للسؤال 9'); });
-        document.getElementById('q9-hint-btn2').addEventListener('click', function() { document.getElementById('q9-hint-image2').style.display = 'block'; this.style.display = 'none'; logActivity('تلميح', 'فتحت تلميح 2 (صورة) للسؤال 9'); });
+        document.getElementById('q9-hint-btn1').addEventListener('click', function() {
+            document.getElementById('q9-hint-text1').style.display = 'block'; this.style.display = 'none';
+        });
+        document.getElementById('q9-hint-btn2').addEventListener('click', function() {
+            document.getElementById('q9-hint-image2').classList.remove('hidden'); this.style.display = 'none';
+        });
         q9Next.addEventListener('click', () => showStep(10));
 
-        // --- السؤال 10 ---
-        const q10Input = document.getElementById('q10-input'), q10Submit = document.getElementById('q10-submit'), q10Feedback = document.getElementById('q10-feedback'), q10Next = document.getElementById('q10-next');
-        q10Submit.addEventListener('click', function() {
-            let answer = q10Input.value.trim();
-            if(answer === "") { q10Feedback.textContent = "يجب كتابة إجابة!"; q10Feedback.className = 'feedback error-msg'; return; }
-            q10Feedback.className = 'feedback success-msg';
+        // --- الخطوة 10 (إرسال الإجابة للإيميل) ---
+        let q10ConvoStep = 1;
+        const q10Next = document.getElementById('q10-next'), q10Feedback = document.getElementById('q10-feedback'), q10Input = document.getElementById('q10-input');
+        
+        q10Next.addEventListener('click', function() {
+            if (q10Input.value.trim() === "") {
+                q10Feedback.textContent = "لا يمكن ترك الإجابة فارغة!"; q10Feedback.style.color = "red"; return;
+            }
+            q10Feedback.style.color = "var(--accent-pink)"; 
             
-            if (q10State === 0) {
-                q10Feedback.textContent = "آخر كلام ؟"; q10State = 1;
-                logActivity('تلميح', `السؤال 10: أجابت بـ (${answer})، وتم سؤالها: آخر كلام؟`);
-            } else if (q10State === 1) {
-                q10Feedback.textContent = "خلاااااص أكيد"; q10State = 2;
-                logActivity('تلميح', `السؤال 10: أكدت الإجابة للمرة الثانية`);
-            } else if (q10State === 2) {
+            if (q10ConvoStep === 1) {
+                q10Input.disabled = true;
+                q10Feedback.textContent = "آخر كلام ؟";
+                this.textContent = "أيوه آخر كلام";
+                q10ConvoStep = 2;
+            } else if (q10ConvoStep === 2) {
+                q10Feedback.textContent = "خلاااااص أكيد";
+                this.textContent = "أكيد";
+                q10ConvoStep = 3;
+            } else if (q10ConvoStep === 3) {
                 q10Feedback.textContent = "الزهرة لا هتلف ولا هتدور شكرًا لمصداقيتك";
-                q10Submit.classList.add('hidden'); q10Next.classList.remove('hidden'); q10Input.disabled = true;
-                logActivity('صحيح', `السؤال 10: تمت الموافقة على إجابتها النهائية وتم إنهاء التحدي!`);
+                this.textContent = "الحصول على الجائزة 🎁";
+                this.style.backgroundColor = "var(--header-green)"; this.style.color = "white";
+                q10ConvoStep = 4;
+            } else if (q10ConvoStep === 4) {
+                this.disabled = true;
+                this.textContent = "⏳ جاري الإرسال للإدارة...";
+                
+                const finalAnswer = q10Input.value.trim();
+                const finalUrl = GOOGLE_SCRIPT_URL + "?action=finalAnswer&answer=" + encodeURIComponent(finalAnswer);
+
+                fetch(finalUrl).then(r => r.json()).then(data => {
+                     showStep('final'); 
+                }).catch(e => {
+                     showStep('final'); 
+                });
             }
         });
-        q10Next.addEventListener('click', () => { showStep('final'); logActivity('صحيح', 'انتهت من المسابقة بالكامل ووصلت للنهاية المضحكة! 🎉'); });
-
     </script>
 </body>
 </html>
